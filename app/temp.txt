@@ -1,0 +1,90 @@
+mattdavis777: on 5th day of 7 days, i want an email sent out saying you have [7-5] days left
+
+
+Kyle: i see
+
+
+mattdavis777: and you have Y referral counts left until your next product level
+
+
+Kyle: i understand
+i can do this also in prelauncher site
+
+
+mattdavis777: ok cool
+
+
+Kyle: so if someone has reached to level-5, no need to send the email.
+right?
+level-5 means 50 referrals
+
+
+mattdavis777: what will the email be pertaining too? how much time left?
+
+
+Kyle: what do you mean?
+
+
+mattdavis777: a level 5 email will say "Congratulations you made it to 50 referrals!"
+
+
+Kyle: okay
+
+
+mattdavis777: and on "day 5" if they already have 50 referrals...we need one that says "We know that you've already maxed out, but please keep referring friends"
+
+
+Kyle: i understand
+i have just asked that email.
+and i have one question
+this prelauncher site is only need one time?
+for one week
+?
+
+
+mattdavis777: it will be for 1 week only and then go away
+
+
+Kyle: oh i see
+
+
+mattdavis777: and we will want to implement it in about 6 months down the road for 1 week too
+we want to make this a "sharing event" that people become excited about twice a year
+
+
+Kyle: i understand
+maybe i can implement "day 5" feature on tommorrow.
+is it ok?
+
+https://mister-pompadour.myshopify.com
+
+https://mister-pompadour-refer.herokuapp.com/?ref=146bbcf3a4
+https://mister-pompadour-refer.herokuapp.com/?ref=fa8a771c2c
+http://mister-pompadour-test-referral.herokuapp.com/?ref=eb37a3f22d
+https://mister-pompadour.myshopify.com
+
+
+Hi Nick
+Thank you for your reply.
+
+1) Will you be able to implement this rails app on a shopify site?
+Actually, it's impossible to integrate this prelaunchr rails source code into shopify site.
+But I have a solution how to integrate this rails app into shopify site.
+I have just done to integrate this app into shopify site.
+2) What will you need to get started (psd, image assets, etc)?
+If you send me the graphic design files (psd is good), I can start immediately
+3) If all necessary assets are provided to you, will your budget include a fully functional and operation prelaunch site?
+I would like to know the fully functional and operation what you want.
+4) Will it be responsive?
+Yes, I can.
+But for all your requirements, I need some extra budget.
+
+
+http://mister-pompadour-friend-refers.herokuapp.com/?ref=2d122e4b7e
+
+User.find_by_email('mattdavis777@gmail.com')
+
+
+
+
+

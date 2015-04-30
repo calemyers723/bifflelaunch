@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html class="ie6 <%= @bodyId %>"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie7 <%= @bodyId %>"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie8 <%= @bodyId %>"> <![endif]-->
+<!--[if IE 9 ]>    <html class="ie9 <%= @bodyId %>"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html class="<%= @bodyId %>"> <!--<![endif]-->
+<head>
+        <title>Biffle&#8217;s &ndash; Tell Friends</title>
+        <link rel="icon" href="<%= asset_path('favicon.ico') %>" type="image/x-icon">
+        <link rel="shortcut icon" href="<%= asset_path('favicon.ico') %>" type="image/x-icon">
+        <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+        <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,900,300,600' rel='stylesheet' type='text/css'>
+
+        <meta property="og:title" content="Biffle is here!"/>
+        <meta property="og:description" content="I'm going to be trying #Biffle products for free.  Check it out!.  Look Sharp. Be Confident."/>
+        <meta property="og:url" content="<%= root_url %>"/>
+        <meta property="og:image" content="<%= asset_path("refer/logo.jpg") %>"/>
+        <meta property="fb:app_id" content="297145297118247"/>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        
+
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        
+        <%= stylesheet_link_tag "application.css", :media => "all" %>
+        <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+        <% if @is_mobile %>
+            
+        <% end %>
+        
+        <%= csrf_meta_tags %>
+</head>
+<body id="<%= @bodyId %>">
+
+<%= yield %>
+
+
+</body>
+</html>

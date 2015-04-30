@@ -1,0 +1,119 @@
+<section class="header_area fix">
+   <div class="topheader fix">
+      <div class="column">
+         <div class="logo floatleft">
+            <a href=""><img src="/assets/logo.png" alt="" /></a>
+         </div>
+         <div class="heading floatleft">
+            <h2>Thank You for Signing Up</h2>
+         </div>
+      </div>
+   </div>
+   <div class="banner fix">
+      <div class="column">
+         <div class="left_banner floatleft">
+            <h1>Your Personal Price Ninja</h1>
+         </div>
+         <div class="right_banner floatright">
+            <h4>Don't Leave Your Friend Behind</h4>
+            <h3>Invite Friends & GET REWARDS</h3>
+            <h4>Share your unique link via email, Facebook or Twitter and earn biffle goods for
+               each friend who signs up.
+            </h4>
+            <div class="linkarea">
+               <p><%= root_url %>?ref=<%= @user.referral_code %></p>
+            </div>
+            <% twitter_message = "Can't wait to try @biffle products." %>
+            <%
+               title = CGI::escape('Biffle');
+               url = CGI::escape(root_url)
+               summary = CGI::escape('Look Sharp. Be Confident. Didn\'t want to leave you all behind. Check out Biffle\'s products here.')
+               image = CGI::escape(root_url + '/assets/refer/logo-fb69ee306dd1e2eb28dd2e5c9e0c103d.jpg')
+               # image = CGI::escape(root_url + '/assets/refer/logo.jpg')
+               referral_code = CGI::escape(@user.referral_code)
+
+            %>
+            <p>
+               <a href="http://www.facebook.com/sharer.php?u=<%= CGI::escape(root_url) %>?ref=<%= CGI::escape(@user.referral_code) %>&p[title]=<%= title %> &p[images][0]=<%= image %>" target="_blank">
+                  <i class="fa fa-facebook"></i>
+               </a>
+               <a href="http://twitter.com/share?url=<%= CGI::escape(root_url) %>?ref=<%= CGI::escape(@user.referral_code) %>&text=<%= CGI::escape(twitter_message) %>" target="_blank">
+                  <i class="fa fa-twitter"></i>
+               </a>
+            </p>
+         </div>
+      </div>
+   </div>
+</section>
+<% 
+   referrals_count = @user.referral_count
+   # referrals_count = 15
+   stops = User::REFERRAL_STEPS
+   found = nil
+   is_flag = false
+   stop_count = stops.size
+   stop_type = "type_0"
+   stops.reverse_each { |stop|
+      if is_flag
+         stop["active"] = true
+         stop["selected"] = false
+      elsif stop["count"] <= referrals_count and !found
+         stop["active"] = true
+         # found = stop
+         is_flag = true
+         stop["selected"] = true
+
+         stop_type = "type_#{stop_count}"
+      else
+         stop["active"] = false
+         stop["selected"] = false
+      end
+      stop_count -= 1;
+   }   
+%>
+
+<section class="howit_work fix">
+   <div class="column">
+      <h1>here's how it works</h1>
+      <div class="allworks">
+         <div class="topwork fix">
+            <div class="stepone floatleft">
+               <h2 class="differ">Friends Jointed</h2>
+            </div>
+            <div class="steptwo floatleft">
+               <h1>3</h1>
+            </div>
+            <div class="stepthree floatleft">
+               <h1>10</h1>
+            </div>
+            <div class="stepfour floatleft">
+               <h1>50</h1>
+            </div>
+            <div class="stepfive floatleft">
+               <h1>100</h1>
+            </div>
+         </div>
+         <div class="midwork fix <%= stop_type %> "></div>
+         <div class="footerwork fix">
+            <div class="one floatleft">
+               <h2>what you get</h2>
+            </div>
+            <div class="two floatleft">
+               <h2>1 Free Lifetime <br />Membership</h2>
+            </div>
+            <div class="three floatleft">
+               <h2>3 Lifetime <br /> Memberships <br />for friends <br />and family.</h2>
+            </div>
+            <div class="four floatleft">
+               <h2>$50 <br /> Gift Card</h2>
+            </div>
+            <div class="five floatleft">
+               <h2>$100 <br /> Gift Card</h2>
+            </div>
+         </div>
+      </div>
+   </div>
+</section>
+<script src="/assets/bootstrap.min.js"></script>
+<script src="/assets/owl.carousel.min.js"></script>
+<script src="/assets/main.js"></script>
