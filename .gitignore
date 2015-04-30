@@ -1,7 +1,6 @@
 node_modules/
 tmp/
 logs/
-config/routes.rb
 config/database.yml
 
 *.log
